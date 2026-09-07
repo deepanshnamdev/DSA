@@ -17,6 +17,6 @@ class Solution {
             }
             j++;
         }
-        return m == Integer.MAX_VALUE ? 0 : m;
+        return m==Integer.MAX_VALUE?0:m;
     }
 }
