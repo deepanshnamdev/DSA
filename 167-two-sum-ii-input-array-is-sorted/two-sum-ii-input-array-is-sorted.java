@@ -14,7 +14,6 @@ class Solution {
             else{
                 array[0]=i+1;
                 array[1]=j+1;
-                // return array;
                 break;
             }
         }
