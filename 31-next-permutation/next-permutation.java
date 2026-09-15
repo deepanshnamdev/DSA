@@ -1,26 +1,26 @@
 class Solution {
     public void nextPermutation(int[] nums) {
         int n=nums.length;
-        int smallelemetfromright=-1;
+        int small_elemet_fromright=-1;
         for(int i=n-1;i>0;i--){
             if(nums[i]>nums[i-1]){
-                smallelemetfromright=i-1;
+                small_elemet_fromright=i-1;
                 break;
             }
         }
-        int largestelementformsmallelemetfromright=smallelemetfromright;
-        if(smallelemetfromright>-1){
-            for(int j=n-1;j>smallelemetfromright;j--){
-                if(nums[j]>nums[smallelemetfromright]){
-                    largestelementformsmallelemetfromright=j;
+        int largest_element_form_small_elemet_from_right=small_elemet_fromright;
+        if(small_elemet_fromright>-1){
+            for(int j=n-1;j>small_elemet_fromright;j--){
+                if(nums[j]>nums[small_elemet_fromright]){
+                    largest_element_form_small_elemet_from_right=j;
                     break;
                 }
             }
-            int temp=nums[smallelemetfromright];
-            nums[smallelemetfromright]=nums[largestelementformsmallelemetfromright];
-            nums[largestelementformsmallelemetfromright]=temp;
+            int temp=nums[small_elemet_fromright];
+            nums[small_elemet_fromright]=nums[largest_element_form_small_elemet_from_right];
+            nums[largest_element_form_small_elemet_from_right]=temp;
         }
-        int left=smallelemetfromright+1;
+        int left=small_elemet_fromright+1;
         int right=n-1;
         while(left<right){
             int temp= nums[left];
